@@ -1,0 +1,28 @@
+.card {
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+
+  .clock {
+    width: 16px;
+    margin: 8px;
+  }
+
+  .time {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    .label {
+      color: #9d9d9d;
+    }
+  }
+
+  .edit {
+    background: transparent;
+    border: 1px solid #959595;
+    min-width: 64px;
+    border-radius: 24px;
+  }
+}
