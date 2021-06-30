@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/bento-hero/static/css/main.8a05084a.chunk.css",
-    "main.js": "/bento-hero/static/js/main.ceae9ca2.chunk.js",
-    "main.js.map": "/bento-hero/static/js/main.ceae9ca2.chunk.js.map",
+    "main.css": "/bento-hero/static/css/main.391900c5.chunk.css",
+    "main.js": "/bento-hero/static/js/main.8e38c5bd.chunk.js",
+    "main.js.map": "/bento-hero/static/js/main.8e38c5bd.chunk.js.map",
     "runtime-main.js": "/bento-hero/static/js/runtime-main.e92238f9.js",
     "runtime-main.js.map": "/bento-hero/static/js/runtime-main.e92238f9.js.map",
-    "static/js/2.bf5ae4d8.chunk.js": "/bento-hero/static/js/2.bf5ae4d8.chunk.js",
-    "static/js/2.bf5ae4d8.chunk.js.map": "/bento-hero/static/js/2.bf5ae4d8.chunk.js.map",
+    "static/js/2.90483c95.chunk.js": "/bento-hero/static/js/2.90483c95.chunk.js",
+    "static/js/2.90483c95.chunk.js.map": "/bento-hero/static/js/2.90483c95.chunk.js.map",
     "index.html": "/bento-hero/index.html",
-    "static/css/main.8a05084a.chunk.css.map": "/bento-hero/static/css/main.8a05084a.chunk.css.map",
-    "static/js/2.bf5ae4d8.chunk.js.LICENSE.txt": "/bento-hero/static/js/2.bf5ae4d8.chunk.js.LICENSE.txt",
+    "static/css/main.391900c5.chunk.css.map": "/bento-hero/static/css/main.391900c5.chunk.css.map",
+    "static/js/2.90483c95.chunk.js.LICENSE.txt": "/bento-hero/static/js/2.90483c95.chunk.js.LICENSE.txt",
     "static/media/clock-solid.407cae33.svg": "/bento-hero/static/media/clock-solid.407cae33.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.e92238f9.js",
-    "static/js/2.bf5ae4d8.chunk.js",
-    "static/css/main.8a05084a.chunk.css",
-    "static/js/main.ceae9ca2.chunk.js"
+    "static/js/2.90483c95.chunk.js",
+    "static/css/main.391900c5.chunk.css",
+    "static/js/main.8e38c5bd.chunk.js"
   ]
 }
