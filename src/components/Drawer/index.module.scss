@@ -27,5 +27,18 @@
     &.active {
       transform: translateY(0px) !important;
     }
+
+    .toggle {
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .bar {
+        width: 128px;
+        min-height: 4px;
+        background: #989898;
+      }
+    }
   }
 }

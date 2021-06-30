@@ -17,7 +17,7 @@ const DeliveryInformationCard: React.FC = () => {
       <Clock className={styles.clock} />
       <div className={styles.time}>
         <span className={styles.label}>Delivery time:</span>
-        <span>{moment(dateRange.startAt).format("H:mm A")}-{moment(dateRange.endAt).format("H:mm A")}</span>
+        <span>{moment(dateRange.startAt).format("H:mm A")}-{moment(dateRange.endAt).format("H:mm A")} on {moment(dateRange.endAt).format("M/D")}</span>
       </div>
       <button className={styles.edit} onClick={() => {
         setOpen(true)
@@ -30,7 +30,8 @@ const DeliveryInformationCard: React.FC = () => {
       }} open={open} onClose={() => {
         setOpen(false)
       }} fullSlot={[
-        moment().add(2, 'hour').toDate()
+        moment().add(1, 'hour').toDate(),
+        moment().add(1.5, 'hour').toDate(),
       ]} />
     </div>
   );

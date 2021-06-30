@@ -76,7 +76,7 @@ const DateTimePicker: React.FC<DateTimePickerProps> = ({
                   })}>
                     {startTime.format("H:mm A")}-{endTime.format("H:mm A")}
                     <br />
-                    <p className={styles.full}>{full ? "Slot Full" : ""}</p>
+                    <span className={styles.full}>{full ? "Slot Full" : <br />}</span>
                     <input type="radio" checked={same} disabled={disabled} onChange={(event) => {
                       onChange?.(startTime.toDate(), endTime.toDate())
                       props?.onClose?.()
