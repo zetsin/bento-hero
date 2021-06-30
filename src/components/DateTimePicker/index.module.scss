@@ -15,11 +15,11 @@
 
     .dates {
       overflow-y: auto;
-      
+
       .date {
         padding: 16px;
         transition: 0.6s;
-        
+
         &.samedate {
           background: white;
         }
@@ -31,7 +31,7 @@
       flex: 1;
       overflow-y: auto;
       padding: 8px 0;
-      
+
       .time {
         padding: 4px 24px;
 
@@ -43,7 +43,7 @@
           user-select: none;
 
           &.disabled {
-            color: #c4c4c4
+            color: #c4c4c4;
           }
 
           .full {
