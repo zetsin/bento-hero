@@ -46,8 +46,9 @@ const DeliveryInformationCard: React.FC = () => {
           setOpen(false);
         }}
         fullSlot={[
-          moment().add(1, "hour").toDate(),
-          moment().add(1.5, "hour").toDate(),
+          moment().toDate(),
+          moment().add(0.5, "hour").toDate(),
+          moment().add(2, "hour").toDate(),
         ]}
       />
     </div>

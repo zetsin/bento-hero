@@ -24,15 +24,35 @@ const DateTimePicker: React.FC<DateTimePickerProps> = ({
   const [selectedDate, setSelectedDate] = React.useState(new Date());
 
   useEffect(() => {
+    if (!endAt) {
+      const findAvailableSlotOfToday = (now = new Date()): [Date, Date] => {
+        const startOfHour = moment(now).startOf("hour")
+        const halfOfHour = startOfHour.clone().add(0.5, "hour")
+    
+        const startTime = moment(now).isBefore(halfOfHour) ? startOfHour : halfOfHour
+        const endTime = startTime.clone().add(0.5, "hour")
+    
+        const full = fullSlot?.some(
+          (item) =>
+            startTime.isSameOrBefore(item) && endTime.isSameOrAfter(item)
+        );
+    
+        if(full) {
+          return findAvailableSlotOfToday(endTime.toDate())
+        }
+    
+        return [startTime.toDate(), endTime.toDate()]
+      }
+
+      onChange?.(...findAvailableSlotOfToday());
+    }
+  }, [endAt, fullSlot, onChange]);
+
+  useEffect(() => {
     if (endAt) {
       setSelectedDate(endAt);
-    } else {
-      onChange?.(
-        moment().startOf("hour").add(0.5, "hour").toDate(),
-        moment().startOf("hour").add(1, "hour").toDate()
-      );
     }
-  }, [endAt, onChange]);
+  }, [endAt]);
 
   return (
     <Drawer {...props}>
@@ -78,13 +98,16 @@ const DateTimePicker: React.FC<DateTimePickerProps> = ({
                 (item) =>
                   startTime.isSameOrBefore(item) && endTime.isSameOrAfter(item)
               );
-              const disabled = endTime.isBefore(moment()) || full;
+
+              if(endTime.isBefore(moment())) {
+                return null
+              }
 
               return (
                 <div key={index} className={styles.time}>
                   <label
                     className={classNames({
-                      [styles.disabled]: disabled,
+                      [styles.disabled]: full,
                     })}
                   >
                     {startTime.format("H:mm A")}-{endTime.format("H:mm A")}
@@ -95,7 +118,7 @@ const DateTimePicker: React.FC<DateTimePickerProps> = ({
                     <input
                       type="radio"
                       checked={same}
-                      disabled={disabled}
+                      disabled={full}
                       onChange={(event) => {
                         onChange?.(startTime.toDate(), endTime.toDate());
                         props?.onClose?.();
